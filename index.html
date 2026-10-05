@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudyAI — Understand Your PDFs With AI</title>
+  <meta name="description" content="StudyAI helps university students understand PDFs, create notes, ask questions, and study smarter.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a href="#" class="logo"><span class="logo-mark">✦</span> StudyAI</a>
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#features">Features</a>
+      <a href="#how-it-works">How it works</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="btn btn-ghost" onclick="showMessage('Login will be connected later.')">Log in</button>
+      <button class="btn btn-primary" onclick="showMessage('Sign up will be connected later.')">Sign up</button>
+    </div>
+    <button class="menu-toggle" aria-label="Open menu" onclick="toggleMenu()">☰</button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <div class="badge">✦ Your AI study companion</div>
+        <h1>Understand your <span>PDFs</span> with AI.</h1>
+        <p class="hero-text">
+          Upload your university notes, textbooks, or study material.
+          StudyAI turns difficult PDFs into simple explanations, useful notes,
+          answers, and quizzes.
+        </p>
+        <div class="hero-buttons">
+          <label class="btn btn-primary btn-large upload-btn">
+            <input type="file" id="pdfInput" accept=".pdf,application/pdf" hidden>
+            <span>📄 Upload Your PDF</span>
+          </label>
+          <a href="#features" class="btn btn-outline btn-large">Explore features</a>
+        </div>
+        <p class="tiny-note">Prototype version • Your files are not uploaded to a server yet.</p>
+      </div>
+
+      <div class="hero-card">
+        <div class="card-top">
+          <div>
+            <span class="mini-label">STUDYAI ASSISTANT</span>
+            <h3>Modern Web Development.pdf</h3>
+          </div>
+          <span class="status-dot">●</span>
+        </div>
+        <div class="progress-row">
+          <span>AI reading your document</span><strong>82%</strong>
+        </div>
+        <div class="progress"><span></span></div>
+        <div class="question-box">
+          <span class="ai-icon">✦</span>
+          <div>
+            <small>AI EXPLANATION</small>
+            <p>“An API is like a messenger that lets two different software systems communicate.”</p>
+          </div>
+        </div>
+        <div class="preview-actions">
+          <button onclick="showMessage('Summarize feature coming next.')">Summarize</button>
+          <button onclick="showMessage('Quiz generation feature coming next.')">Generate Quiz</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <span>Built for students</span>
+      <span>•</span>
+      <span>Simple</span>
+      <span>•</span>
+      <span>Fast</span>
+      <span>•</span>
+      <span>AI-powered learning</span>
+    </section>
+
+    <section class="section" id="features">
+      <div class="section-heading">
+        <div class="badge">WHAT YOU CAN DO</div>
+        <h2>Study smarter, not harder.</h2>
+        <p>Everything you need to turn complicated study material into something you can actually understand.</p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card">
+          <div class="feature-icon">📝</div>
+          <h3>Summarize PDFs</h3>
+          <p>Turn long chapters and lecture notes into clear, useful summaries.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">💡</div>
+          <h3>Explain Topics</h3>
+          <p>Get difficult concepts explained in simple language, step by step.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">❓</div>
+          <h3>Ask Questions</h3>
+          <p>Ask questions about your study material and get focused answers.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">📚</div>
+          <h3>Create Study Notes</h3>
+          <p>Transform your PDFs into organised revision notes and key points.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">🧪</div>
+          <h3>Generate Quizzes</h3>
+          <p>Test yourself with questions generated from the material you study.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">🎯</div>
+          <h3>Study With Focus</h3>
+          <p>Keep your learning centred on the exact material you need to master.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section process-section" id="how-it-works">
+      <div class="section-heading">
+        <div class="badge">HOW IT WORKS</div>
+        <h2>Three simple steps.</h2>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <span class="step-number">01</span>
+          <h3>Upload</h3>
+          <p>Choose a PDF containing your university study material.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <span class="step-number">02</span>
+          <h3>AI reads</h3>
+          <p>StudyAI processes the document and understands its content.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <span class="step-number">03</span>
+          <h3>Learn</h3>
+          <p>Ask questions, get explanations, create notes, and practise.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="dashboard-section">
+      <div class="dashboard-copy">
+        <div class="badge">YOUR STUDY SPACE</div>
+        <h2>A dashboard built around your learning.</h2>
+        <p>
+          Keep your documents, recent study sessions, progress, and AI tools
+          together in one simple place.
+        </p>
+        <button class="btn btn-primary" onclick="showMessage('Dashboard will become functional when we build the app backend.')">Preview dashboard</button>
+      </div>
+
+      <div class="dashboard-preview">
+        <div class="dash-sidebar">
+          <div class="dash-logo">✦</div>
+          <span class="active">⌂</span>
+          <span>▣</span>
+          <span>✦</span>
+          <span>⚙</span>
+        </div>
+        <div class="dash-main">
+          <div class="dash-header">
+            <div><small>WELCOME BACK</small><h3>Ready to study?</h3></div>
+            <div class="avatar">S</div>
+          </div>
+          <div class="dash-stats">
+            <div><small>PDFs</small><strong>12</strong></div>
+            <div><small>QUESTIONS</small><strong>86</strong></div>
+            <div><small>QUIZZES</small><strong>8</strong></div>
+          </div>
+          <div class="recent">
+            <small>RECENT DOCUMENTS</small>
+            <div class="doc"><span>📄</span><div><strong>Computer Networks</strong><small>24 pages</small></div><b>›</b></div>
+            <div class="doc"><span>📄</span><div><strong>Database Systems</strong><small>31 pages</small></div><b>›</b></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="badge">START LEARNING</div>
+      <h2>Make your next PDF easier to understand.</h2>
+      <p>Upload your study material and explore what an AI study assistant could do for you.</p>
+      <label class="btn btn-primary btn-large upload-btn">
+        <input type="file" id="pdfInputBottom" accept=".pdf,application/pdf" hidden>
+        <span>📄 Try StudyAI</span>
+      </label>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand"><span class="logo-mark">✦</span> StudyAI</div>
+    <p>© 2026 StudyAI. Front-end prototype.</p>
+  </footer>
+
+  <div id="toast" class="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
